@@ -1,0 +1,116 @@
+https://www.hackerrank.com/challenges/a-chocolate-fiesta/copy-from/231209465
+
+code :
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+
+  int n;
+        cin >> n;
+        odd = false;
+        int  t;
+        for (int j=1; j<=n; j++)
+        {
+            cin >> t;
+            if (t%2 != 0)
+            {
+                odd = true;
+            }
+
+        }
+
+        int r = 1;
+
+        if (odd)
+        {
+            for (int i=1; i<n; i++)
+            {
+                r = r*2;
+                r=r%MOD;
+            }
+        }
+        else
+        {
+            for (int i=1; i<=n; i++)
+            {
+                r = r*2;
+                r=r%MOD;
+            }
+        }
+        cout <<  r-1 << endl ;
+}
+
+
+
+
+
+
+//#include<bits/stdc++.h>
+//#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+//#define MOD 1000000007
+//
+//using namespace std;
+//bool odd;
+//
+//
+//void allPossibleSubset(long long arr[], long long n)
+//{
+//    long long count = pow(2, n);
+//    long long cnt = 0, sum = 0;
+//    // The outer for loop will run 2^n times to print all subset .
+//    // Here variable i will act as a binary counter
+//    for (long long i = 0; i < count; i++)
+//    {
+//        // The inner for loop will run n times ,
+//        // As the maximum number of elements a set can have is n
+//        // This loop will generate a subset
+//        for (long long j = 0; j < n; j++)
+//        {
+//            // This if condition will check if jth bit in
+//            // binary representation of  i  is set or not
+//            // if the value of (i & (1 << j)) is not 0 ,
+//            // include arr[j] in the current subset
+//            // otherwise exclude arr[j]
+//            if ((i & (1 << j)) != 0)
+//            {
+//                sum = sum + arr[j];
+//                sum =sum;
+//                //cout << arr[j] << " ";
+//
+//            }
+//
+//        }
+//        //cout << endl;
+//        if (sum % 2 == 0)
+//        {
+//            cnt ++ ;
+//        }
+//        sum = 0;
+//
+//    }
+//
+//
+//    cout << cnt-1  << endl ;
+//}
+//int main()
+//{
+//    long long n;
+//
+//    cout << "Enter size of the set\n";
+//    cin >> n;
+//
+//    long long arr[n];
+//    cout << "Enter Elements of the set\n";
+//    for (long long i = 0; i < n; i++)
+//        cin >> arr[i];
+//
+//    allPossibleSubset(arr, n);
+//
+//    return 0;
+//}
+//
+//
+

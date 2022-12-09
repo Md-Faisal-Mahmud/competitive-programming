@@ -1,0 +1,41 @@
+link :  https://codeforces.com/contest/1529/problem/B
+
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+
+int main ()
+{
+    faster
+    int z ;  cin >> z ;
+    while (z--)
+    {
+        int a, b, cnt = 1,  mi = 100000000000;
+        int n ;   cin >> n ;
+        int arr[n];
+        for (int i = 0; i<n; i++)
+        {
+            cin >> arr[i];
+        }
+        
+        if (n==1)
+            cout << cnt << endl ;
+        else
+        {
+            sort (arr, arr + n);
+            for (int i = 0; i<n-1; i++ )
+            {
+                a = arr[i];
+                b = arr[i+1];
+                int  d = abs(a-b);
+                mi = min(mi , d );
+
+                if (mi >= b)
+                {
+                    cnt ++;
+                }
+            }
+            cout << cnt << endl  ;
+        }
+    }
+}

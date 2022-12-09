@@ -1,0 +1,49 @@
+link : https://codeforces.com/contest/1526/problem/A
+
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ll long long int
+using namespace std;
+
+
+int main ()
+{
+    faster
+    int z ;
+    cin >> z ;
+    while (z--)
+    {
+
+        int n,g;
+        cin >> n ;
+
+
+        vector <int> v(2*n);
+
+
+        for (int &x : v)
+        {
+            cin >> x;
+        }
+
+        sort (v.begin(), v.end());
+
+
+
+
+//        for (int i = 0; i<n; i++)
+//        {
+//            cout << v[i] << " " << v[i+n] << " ";
+//        }
+
+
+        for (int i = 0,j=0; i<n, j<n; i++,j++)
+        {
+            cout << v[i] << " " << v[j+n] << " ";
+        }
+
+        cout << endl ;
+
+    }
+
+}

@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+const int mod=1000000007;
+
+int main()
+{
+    int n; cin >> n;
+    unsigned long long  answer=1;
+    for (int  i=1; i<=n; i++)
+    {
+
+        answer = (answer*i) % mod;       // Now f never can exceed 10^9+7
+    }
+    cout << answer;
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
+
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+
+unsigned long long factorial(int n)
+{
+    const unsigned int M = 1000000007;
+
+    unsigned long long answer = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        answer = (answer*i) % M;         // Now f never can exceed 10^9+7
+    }
+    return answer;
+}
+
+int main()
+{
+    int n; cin >> n;
+    cout << factorial(n);
+}
+

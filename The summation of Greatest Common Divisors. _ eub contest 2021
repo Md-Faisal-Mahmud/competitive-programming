@@ -1,0 +1,31 @@
+// Problem link : https://www.hackerrank.com/contests/inter-department-programming-competition-2021/challenges/the-summation-of-greatest-common-divisors-/problem
+
+#include<bits/stdc++.h>
+#include<stdio.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+
+int main()
+{
+    faster
+    int n, G ;                                         // G is sum of GCD
+    for (int k=1; k<=100; k++)
+    {
+        cin >> n ;
+        if (n==0)
+        {
+            break;
+        }
+        else
+        {
+            G=0;
+            for(int i=1; i<n; i++)
+                for(int j=i+1; j<=n; j++)
+                {
+                    G+=__gcd(i,j);                       // STL gcd library function
+                }
+        }
+        cout << G << endl ;
+    }
+
+}

@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    for (int j=1; j<=t; j++)
+    {
+        int s;
+        cin >> s ;
+        int arr[s];
+
+        cin >> arr[0];
+
+
+        int lcm = arr[0];
+
+        for (int i=1; i<s; i++)
+        {
+            cin >> arr[i];
+            lcm = (lcm * arr[i]) / (__gcd(lcm,arr[i]));
+        }
+
+        cout << "Case " << j << ": " << lcm << endl;
+    }
+}

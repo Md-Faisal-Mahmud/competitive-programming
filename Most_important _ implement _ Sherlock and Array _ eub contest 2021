@@ -1,0 +1,44 @@
+// problem link : https://www.hackerrank.com/contests/inter-department-programming-competition-2021/challenges/sherlock-and-array/copy-from/1332152991
+
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ll long long int
+using namespace std;
+
+int main()
+{
+    faster
+
+
+    int t ; cin >> t ;
+
+    while (t--)
+    {
+        int x = 0, y , sum = 0;
+        ll n; cin >> n;
+        ll arr[n];
+        for (ll i=0; i<n; i++)
+        {
+            cin >> arr[i];
+        }
+        
+        for (ll i=0; i<n; i++)
+        {
+            sum = sum + arr[i];
+        }
+
+        int cnt = 0;
+         for (ll i=0; i<n; i++){
+              y = arr[i];
+              if (2*x + y == sum)
+              {
+                  cout << "YES" << endl ;
+                  cnt ++;
+                  break ;
+              }
+              x = x + arr[i];
+        }
+        if (cnt == 0)
+            cout << "NO" << endl ;
+    }
+}

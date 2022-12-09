@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+const int mod=1000000007;
+
+int main()
+{
+    faster
+    unsigned long long a,b; cin >> a >> b;  // 1 <= a,b <= 10^18
+
+    //cout << (a*b)%mod; //Overflow for: a,b=10^18 ;10^18=1000000000000000000 ; 10^36=1000000000000000000000000000000000000
+
+    cout << ((a%mod)*(b%mod))%mod;  // This will give correct answer;
+}

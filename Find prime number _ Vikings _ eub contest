@@ -1,0 +1,36 @@
+// Problem Link : https://www.hackerrank.com/contests/inter-department-programming-competition-2021/challenges/vikings
+
+#include<bits/stdc++.h>
+#include<stdio.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+
+int main()
+{
+    faster
+    int n, m;
+    cin >> n >> m;
+
+    bool flag = true;
+    if (n == 0 || n == 1)                             // 0 and 1 are not prime numbers
+    {
+        flag = false;
+    }
+    else
+    {
+        for (int i=2; i<=n/2; i++)                   // 2 is the only positive prime number
+        {
+            if (n%i ==0)
+            {
+                flag = false;
+                break;
+            }
+        }
+
+    }
+
+    if (flag && m<400 )
+        cout << "Vikings Attack" ;
+    else
+        cout << "No Movement";
+}

@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+const int mod=1000000007;
+int pow(int base,int power)
+{
+    if(power==0) return 1;
+    if(power==1) return base;
+
+    int answer;
+    if(power%2==0)
+    {
+        answer = pow(base,power/2);
+        answer = answer * answer;
+    }
+    else
+    {
+        answer = pow(base,(power-1)/2);
+        answer = base * answer * answer;
+    }
+    return answer;
+}
+
+int main()
+{
+    int base,power ;
+    cin >> base >> power;
+
+    int ans = pow(base,power);
+    cout << ans;
+}

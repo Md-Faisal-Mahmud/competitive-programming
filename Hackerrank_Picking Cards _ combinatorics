@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int mod=1000000007;
+
+long arr[5000001];
+
+int main()
+
+{
+    int t;
+    cin>>t;
+    while(t--){
+    int n,a,i;
+    cin>>n;
+    for(int j=0;j<n;j++)
+    {
+        cin>>a;
+        arr[a]++;
+    }
+    long product=1;
+    long sum=0;
+
+    for( i=0;i<n;i++)
+    {
+       sum=(sum+arr[i])%mod;
+
+       product=((product%mod)*(sum%mod))%mod;
+       if (product == 0)
+       break;
+       sum--;
+       //arr[i]=0;   //back to zero -> reset
+    }
+
+    cout<<product<<endl;
+    }
+}

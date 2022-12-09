@@ -1,0 +1,20 @@
+                                                            Vector Declaration
+                                                            ------------------
+                                                            
+//     Size_Fix_like_array :    //
+
+vector<int> a(20); 
+
+int n; cin >> n;
+vector<int> v(n);        
+
+
+
+//    Take_Input or traverse all elment of vector v :   //
+
+for(auto &i:v)  cin >> i;   cout << i ;
+
+
+
+
+

@@ -1,0 +1,109 @@
+link : https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/practice-problems/algorithm/graph-representation-problem/
+................................code 2 : with 2d array ........................................................
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int matrix[1001][1001];
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int i,m,n,q,a,b;
+    cin >> n >> m;
+    for(i=1;i<=m;i++)
+    {
+        cin >> a >> b ;
+        matrix[a][b] = 1;
+        matrix[b][a] = 1;
+    }
+    cin >> q;
+    for(i=1;i<=q;i++)
+    {
+        cin >> a >> b;
+        if(matrix[a][b]==1)
+        printf("YES\n");
+        else
+        printf("NO\n");
+    }
+    return 0;
+}
+
+.....................................code 2 : with array of vector ...................................................................
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+// Adjascency List representation in C++
+#define max 100000
+using namespace std;
+vector <int> adj[max];
+int main()
+{
+    //freopen("inp.txt",  "r" , stdin);
+	int n,m ; cin >> n >> m ;
+    for(int i=0;i<m;i++){
+			int u, v;
+			cin>>u>>v;
+			adj[u].push_back(v);
+			adj[v].push_back(u);
+		}
+
+	int q ; cin >> q;
+	for(int i=1;i<=q;i++)
+    {
+        int a , b; cin >> a >> b;
+        
+		int flag = 0;
+		for (int j  = 0; j < adj[a].size(); j++)
+		{
+			if (adj[a][j] == b)
+			{
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 1)
+		    cout << "YES" << endl ;
+		else
+		   cout << "NO" << endl ; 
+    }
+}
+...........................................code 3 : with vector of vector : 2d vector.............................................
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<vector<int> > edges(1000);
+
+int main(){
+	std::ios_base::sync_with_stdio(0);
+	  edges.clear();
+		int n, m;
+		cin>>n>>m;	
+		edges.clear();
+		for(int i=0;i<m;i++){
+			int u, v;
+			cin>>u>>v;
+			edges[u].push_back(v);
+			edges[v].push_back(u);
+		}
+		int q;
+		cin>>q;
+		for(int i=0;i<q;i++)
+		{
+		    int a,b;
+		    cin>>a>>b;
+		    int flag=0;
+		    for(int i=0;i<(int)edges[a].size();i++)
+		    {
+		        if(edges[a][i]==b)
+		        {
+		            flag=1;
+		            break;
+		        }
+		    }
+		    if(flag==1) cout<<"YES"<<"\n";
+		    else cout<<"NO"<<"\n";
+		}
+}
+
+

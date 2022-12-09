@@ -1,0 +1,27 @@
+// problem link : https://www.hackerrank.com/contests/eub-mujib-100-years-programming-contest-2020/challenges/our-national-flag
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ll long long int
+using namespace std;
+
+
+int main()
+{
+    faster
+    int t ; cin >> t ;
+    while (t--)
+    {
+        double length ;cin >> length;
+        double width = .6 * length;
+        double r = length/5;
+
+        double red_area = 3.1416 * r * r ;
+        cout << fixed;
+        cout << setprecision(2);
+        cout << red_area << " " ;
+        double greenArea = (length*width) - red_area  ;
+
+        cout << greenArea << endl ;
+
+    }
+}
