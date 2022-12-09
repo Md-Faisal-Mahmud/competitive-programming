@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+using namespace std;
+const int mod=1000000007;
+#define ll long long int
+#define size 1000001
+ll arr[size];
+
+void afs(int n)
+{
+    for (int k=2;k<=1000000;k++){   // 2 theke 10^6 porjonto value 1 diye dilam sob index e
+        arr[k] = 1;
+    }
+
+    
+    for (ll j=2; j<= n; j++)       //sum of factors ber kora hoilo
+    {
+        for (ll i=j+j; i<=n ; i+=j)    // for (ll i=2*j; i<=n ; i+=j) ataw dile hoi
+        {
+            arr[i]+=j;
+        }
+
+    }
+    
+    
+    for (int z=2;z<=n;z++){  // age factor kora silo + afs ber kora hoilo
+        arr[z]+=arr[z-1];
+    }
+
+
+}
+int main()
+{
+    faster
+    afs(1000000);
+    int t ; cin >> t;
+    while(t--)
+    {
+        ll n; cin >> n;
+        cout << arr[n] << endl ;
+    }
+
+}
