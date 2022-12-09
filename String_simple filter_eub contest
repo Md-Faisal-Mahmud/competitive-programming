@@ -1,0 +1,40 @@
+// problem link : https://www.hackerrank.com/contests/inter-department-programming-competition-2021/challenges/simple-filter
+
+
+#include<bits/stdc++.h>
+#define faster ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ll long long int
+using namespace std;
+
+int main()
+{
+    faster
+
+    string str; getline(cin,str);
+    if (str >="A" && str<= "z")
+        cout << "'" << str << "'" << " is alphabet." << endl;
+    else if (str >="0" && str<="9")
+        cout << "'" << str << "'" << " is digit." << endl;
+    else
+        cout << "'" << str << "'" << " is special character." << endl;
+
+}
+
+
+
+/* Same program with C 
+int main()
+{
+    faster
+    char ch;
+    scanf ("%c", &ch);
+    if (ch >='A' && ch<= 'z')
+        cout << "'" << ch << "'" << " is alphabet." << endl;
+    else if (ch >='0' && ch<='9')
+        cout << "'" << ch << "'" << " is digit." << endl;
+
+    else
+        cout << "'" << ch << "'" << " is special character." << endl;
+
+}
+*/
