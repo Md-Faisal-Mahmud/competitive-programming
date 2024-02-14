@@ -1,1 +1,1 @@
-# Competitive-Programming
+# cpp-number-theory
