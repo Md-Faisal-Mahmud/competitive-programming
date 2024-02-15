@@ -1,9 +1,0 @@
-
-# Set the language for Python files
-*.c linguist-language=C
-
-# Set the language for C# files
-*.cs linguist-language=C#
-
-# Set the language for C++ files
-*.cpp linguist-language=C++
