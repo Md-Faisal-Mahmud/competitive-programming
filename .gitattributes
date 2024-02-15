@@ -1,8 +1,0 @@
-# Set the language for JavaScript files
-*.js linguist-language=JavaScript
-
-# Set the language for Python files
-*.py linguist-language=Python
-
-# Set the language for HTML files
-*.html linguist-language=HTML
