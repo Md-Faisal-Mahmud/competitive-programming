@@ -1,12 +1,9 @@
-# Set the language for JavaScript files
-*.js linguist-language=JavaScript
 
 # Set the language for Python files
 *.c linguist-language=C
 
 # Set the language for C# files
-*.cs linguist-language=CSharp
+*.cs linguist-language=C#
 
 # Set the language for C++ files
-*.cpp linguist-language=CPlusPlus
-*.h linguist-language=CPlusPlus
+*.cpp linguist-language=C++
